@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
-<path d="M65.904,52.834c-4.734,3.725-10.695,5.955-17.172,5.955c-6.316,0-12.146-2.119-16.821-5.68C16.654,55.575,5,68.803,5,84.757
-	c0,17.711,14.356,6.197,32.065,6.197h25.868C80.643,90.954,95,102.468,95,84.757C95,68.051,82.22,54.333,65.904,52.834z"/>
-<path d="M48.732,55.057c13.285,0,24.092-10.809,24.092-24.095c0-13.285-10.807-24.094-24.092-24.094
-	c-13.285,0-24.093,10.809-24.093,24.094C24.64,44.248,35.448,55.057,48.732,55.057z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7" fill="#AAAAAC">
+            <ellipse id="Oval-9" cx="11.3134191" cy="6.19205298" rx="5.87408088" ry="6.04635762"></ellipse>
+            <path d="M8.75346105,11.5696916 L8.75346105,12.867291 C8.75346105,12.867291 0.848000919,14.0049669 0.411204619,19.1555257 C0.411204619,19.1555257 0.336562213,21.9271523 2.90094353,21.9271523 L11.1897141,21.9271523 L11.1897141,11.9738565 L8.75346105,11.5696916 Z" id="Path-4"></path>
+            <path d="M19.4435853,11.5099338 L19.4435853,12.8075331 C19.4435853,12.8075331 11.5381251,13.945209 11.1013288,19.0957678 C11.1013288,19.0957678 11.0266864,21.8673945 13.5910677,21.8673945 L21.8798383,21.8673945 L21.8798383,11.9140986 L19.4435853,11.5099338 Z" id="Path-4-Copy" transform="translate(16.490471, 16.688664) scale(-1, 1) translate(-16.490471, -16.688664) "></path>
+        </g>
+    </g>
 </svg>
