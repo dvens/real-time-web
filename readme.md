@@ -4,7 +4,7 @@ In this repo you will find my Meteor roadtrip of three weeks.
 # Week 1: 
 
 ## Exercise 1 & 2: Starters Guide and Github
-I didn't use the Discover Meteor Starter Edition. I used the new es2015(ES6) starters guide from the Meteor website instead. It has a different folder structure and you easily determine when to use certain code on client or server side because of the ES6 imports. Link to the starters guide: [Es6 Meteor Starters Guide](http://guide.meteor.com/structure.html).
+I didn't use the Discover Meteor Starter Edition. I used the new es2015(ES6) starters guide on the Meteor website instead. It has a different folder structure and you easily determine when to use certain code on client or server side because of the ES6 imports. Link to the starters guide: [Es6 Meteor Starters Guide](http://guide.meteor.com/structure.html).
 
 ## Exercise 3: Dataset and App
 
@@ -61,3 +61,8 @@ League Ranked Pro is for the ranked League of Legends players that play in a tea
 * MongoDB with match data
 * MongoDB with user data
 * MongoDB with team data
+
+# Week 2
+
+## Exercise 1 
+I have chosen a 
