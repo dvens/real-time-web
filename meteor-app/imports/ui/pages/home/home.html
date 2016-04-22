@@ -2,53 +2,6 @@
 
 	<section class="page home">
 		<h1>Welcome at League Ranked Pro <span>{{singleUser.profile.summonerName}}</span></h1>
-		<h2>Users</h2>
-
-		<ul class="overview-list">
-			<li class="overview-list__item">
-				<div class="overview-list__box"><p>Summoner name</p></div>
-				<div class="overview-list__box"><p>Team name</p></div>
-				<div class="overview-list__box"><p>Activity</p></div>
-				<div class="overview-list__box"><p>Invite</p></div>
-			</li>
-			{{#each user in users}}
-				<li class="overview-list__item">
-					<div class="overview-list__box"><p>{{user.profile.summonerName}}</p></div>
-					<div class="overview-list__box">
-						{{#if isInTeam user._id}}
-							<p>{{user.profile.team}}</p>
-						{{else}}
-							<p>Not in a team</p>
-						{{/if}}
-					</div>
-					<div class="overview-list__box">
-						{{#if isActive user._id}}
-							<p class="user-status user-status--online"><span class="user-status__indicator user-status__indicator--online"></span>{{user.profile.isActive}}</p>
-						{{else}}
-							<p class="user-status user-status--offline"><span class="user-status__indicator user-status__indicator--offline"></span>{{user.profile.isActive}}</p>
-						{{/if}}
-					</div>
-					<div class="overview-list__box">
-						{{#if getTeamRole singleUser._id}}
-
-							{{#if isInTeam user._id}}
-								<p>Player is already in a team</p>
-							{{else}}
-							<form>
-								<input type="hidden" name="summonername" value="{{user.profile.summonerName}}">
-								<input type="hidden" name="userid" value="{{user._id}}">
-								<button class="button button--invite">Invite to team</button>
-							</form>
-							{{/if}}
-
-						{{else}}
-							<p>You've to be team leader to invite</p>
-						{{/if}}
-
-					</div>
-				</li>
-			{{/each}}
-		</ul>
 
 		<h2>Teams</h2>
 		<ul class="overview-list">

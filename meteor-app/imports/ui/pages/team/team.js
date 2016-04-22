@@ -9,7 +9,7 @@ Template.team.onCreated(function() {
 });
 
 Template.team.events({
-    'submit form': function(e){
+    'submit form.createTeam': function(e){
 
         e.preventDefault();
 
@@ -26,6 +26,23 @@ Template.team.events({
         Meteor.call('Teams.insert', data);
         Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.teamRole": userData.teamRole,"profile.team": userData.team}});
 
+    },
+
+    'submit form.remove': function(e){
+
+        e.preventDefault();
+
+        let data = {
+            teamName: Meteor.user().profile.team,
+            summonerName: e.target.childNodes[1].value,
+        };
+
+        let id = Meteor.users.find({"profile.summonerName": data.summonerName}).fetch()[0]['_id'];
+
+        Meteor.users.update({_id: id}, {$set: {"profile.teamRole": '',"profile.team": ''}});
+
+        Meteor.call('Teams.delete', data);
+
     }
 });
 
@@ -38,7 +55,9 @@ Template.team.helpers({
 
     },
     team() {
-        let team = Meteor.user().profile.teamName;
-        return Teams.find({teamName: team}).fetch();
+        let team = Meteor.user().profile.team;
+        let teamMembers = Teams.find({teamName: team}).fetch()[0].players;
+
+        return teamMembers;
     }
 });

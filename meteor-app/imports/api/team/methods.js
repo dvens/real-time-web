@@ -19,6 +19,25 @@ Meteor.methods({
 
     },
 
+    'Teams.delete'(data) {
+
+        check(data.teamName, String);
+        check(data.summonerName, String);
+
+        if (! Meteor.userId()) {
+          throw new Meteor.Error('not-authorized');
+        }
+
+        //get old array
+        let oldData = Teams.find({teamName: data.teamName}).fetch()[0].players;
+        let index = _.without(oldData, data.summonerName);
+
+        Teams.update({teamName: data.teamName}, {$set: {players: index}});
+
+        FlowRouter.go('users');
+
+    },
+
     'Teams.insertPlayer'(team, player) {
 
         check(player, String);

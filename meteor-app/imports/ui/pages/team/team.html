@@ -2,17 +2,34 @@
 
     <section class="page team">
         <h1>Team page</h1>
+
+
         {{#if isInTeam singleUser._id}}
         <ul class="overview-list">
             <li class="overview-list__item overview-list__item--team">
                 <div class="overview-list__box"><p>Member name</p></div>
                 <div class="overview-list__box"><p>Activity</p></div>
             </li>
+            {{#each player in team}}
+            <li class="overview-list__item overview-list__item--team">
+                <div class="overview-list__box"><p>{{player}}</p></div>
+                <div class="overview-list__box">
+                    {{#if getTeamRole singleUser._id}}
+                        <form class="remove">
+                            <input type="hidden" name="summonername" value="{{player}}">
+                            <button type="submit" class="button button--invite">Remove from team</button>
+                        </form>
+                    {{else}}
+                        <p>You've to be team leader to remove a player</p>
+                    {{/if}}
+                </div>
+            </li>
 
+            {{/each}}
         </ul>
         {{else}}
             <p>You're not in team. Create your own team.</p>
-            <form>
+            <form class="createTeam">
                 <input type="text" name="teamName" value="">
                 <button class="button button--create-team">Create team</button>
             </form>

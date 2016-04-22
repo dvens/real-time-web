@@ -12,6 +12,8 @@ import '../../ui/pages/home/home.js';
 import '../../ui/pages/login/login.js';
 import '../../ui/pages/register/register.js';
 import '../../ui/pages/team/team.js';
+import '../../ui/pages/users/users.js';
+import '../../ui/pages/game/game.js';
 
 // Home router
 FlowRouter.route( '/', {
@@ -37,6 +39,30 @@ FlowRouter.route( '/', {
 	}
 });
 
+// Users router
+FlowRouter.route( '/users', {
+	name: 'users',
+	triggersEnter: function(context, redirect) {
+
+		// If the user is not logged in give no access to the dashboard
+		if(!Meteor.userId()) {
+
+			redirect('/login');
+
+		}
+
+	},
+	action: function() {
+
+		BlazeLayout.render( 'applicationLayout', {
+		  header: 'header',
+		  main: 'users',
+		  footer: 'footer'
+		});
+
+	}
+});
+
 // Team router
 FlowRouter.route( '/team', {
 	name: 'team',
@@ -55,6 +81,30 @@ FlowRouter.route( '/team', {
 		BlazeLayout.render( 'applicationLayout', {
 		  header: 'header',
 		  main: 'team',
+		  footer: 'footer'
+		});
+
+	}
+});
+
+// Team router
+FlowRouter.route( '/game', {
+	name: 'game',
+	triggersEnter: function(context, redirect) {
+
+		// If the user is not logged in give no access to the dashboard
+		if(!Meteor.userId()) {
+
+			redirect('/login');
+
+		}
+
+	},
+	action: function() {
+
+		BlazeLayout.render( 'applicationLayout', {
+		  header: 'header',
+		  main: 'game',
 		  footer: 'footer'
 		});
 

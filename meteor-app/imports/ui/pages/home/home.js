@@ -8,26 +8,6 @@ Template.home.onCreated(function() {
 
 });
 
-Template.home.events({
-    'submit form': function(e){
-
-        e.preventDefault();
-
-        let team = Meteor.user().profile.team;
-        let player = $('[name=summonername]').val();
-        let id = $('[name=userid]').val();
-
-        let userData = {
-            team: team,
-            teamRole: 'member'
-        };
-
-        Meteor.call('Teams.insertPlayer', team, player);
-        Meteor.users.update({_id: id}, {$set: {"profile.teamRole": userData.teamRole, "profile.team": userData.team}});
-
-    }
-});
-
 Template.home.helpers({
     singleUser() {
 
