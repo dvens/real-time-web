@@ -2,3 +2,53 @@
     width: 100%;
     max-width: 100%;
 }
+
+.game__members {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1em;
+    background-color: $color-gray;
+
+    &.game__members--left {
+        left: 70px;
+
+        li {
+            border-bottom: 3px solid #5abbd4;
+        }
+    }
+
+    &.game__members--right {
+        right: 0px;
+
+        li {
+            border-bottom: 3px solid #BD1B1F;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        background-color: $color-gray-dark;
+        margin-bottom: 1em;
+        width: 3.5em;
+        height: 3.5em;
+    }
+}
+
+.game__timer {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    position: fixed;
+    background-color: $color-gray;
+    width: 12em;
+    padding: 1em;
+    text-align:center;
+    h3 {
+        color: white;
+        margin-bottom: 1em;
+    }
+}
