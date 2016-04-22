@@ -14,8 +14,8 @@ Template.users.events({
         e.preventDefault();
 
         let team = Meteor.user().profile.team;
-        let player = $('[name=summonername]').val();
-        let id = $('[name=userid]').val();
+        let player = e.target.childNodes[1].value;
+        let id = e.target.childNodes[3].value;
 
         let userData = {
             team: team,
