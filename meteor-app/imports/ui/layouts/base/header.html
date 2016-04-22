@@ -2,14 +2,14 @@
 
 	<header class="header">
 
-		<a class="header__logo" href="/">
+		<a class="header__logo" href="{{pathFor route='home'}}">
 			<img src="images/logo.svg" alt="">
 		</a>
 
 		<nav class="header__navigation">
 			<ul>
 				<li class="header__navigation-item">
-					<a href="#">
+					<a class="{{ activeIfTemplateIs 'team'}}" href="{{pathFor route='team'}}">
 						<svg width="28px" height="22px" viewBox="0 0 28 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
 						    <title>Group 6</title>
@@ -31,7 +31,7 @@
 					</a>
 				</li>
 				<li class="header__navigation-item">
-					<a href="#">
+					<a class="{{ activeIfTemplateIs 'game'}}" href="/game">
 						<svg width="33px" height="27px" viewBox="0 0 33 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
 						    <title>Group 3</title>
@@ -56,7 +56,7 @@
 					</a>
 				</li>
 				<li class="header__navigation-item">
-					<a href="#">
+					<a class="{{ activeIfTemplateIs 'account'}}" href="/acco">
 						<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
 						    <title>Group 7</title>
@@ -72,6 +72,7 @@
 						</svg>
 					</a>
 				</li>
+
 				<li class="header__navigation-item header__navigation-item--logout">
 					<a href="#">
 						<svg width="29px" height="26px" viewBox="0 0 29 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -12,14 +12,16 @@
 @import '../imports/ui/styles/elements/buttons';
 @import '../imports/ui/styles/elements/modifiers';
 @import '../imports/ui/styles/elements/loader';
-@import '../imports/ui/styles/elements/header';
+@import '../imports/ui/styles/elements/form';
+@import '../imports/ui/styles/elements/lists';
 
-// layout elements
+// layout
 @import '../imports/ui/styles/layout/main';
 @import '../imports/ui/styles/layout/footer';
+@import '../imports/ui/styles/layout/header';
 
 // modules
 @import '../imports/ui/styles/modules/page';
-
-// Pages
-@import '../imports/ui/pages/home/home.scss';
+@import '../imports/ui/styles/modules/login';
+@import '../imports/ui/styles/modules/home';
+@import '../imports/ui/styles/modules/team';

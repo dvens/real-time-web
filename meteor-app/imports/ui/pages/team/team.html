@@ -1,0 +1,23 @@
+<template name="team">
+
+    <section class="page team">
+        <h1>Team page</h1>
+        {{#if isInTeam singleUser._id}}
+        <ul class="overview-list">
+            <li class="overview-list__item overview-list__item--team">
+                <div class="overview-list__box"><p>Member name</p></div>
+                <div class="overview-list__box"><p>Activity</p></div>
+            </li>
+
+        </ul>
+        {{else}}
+            <p>You're not in team. Create your own team.</p>
+            <form>
+                <input type="text" name="teamName" value="">
+                <button class="button button--create-team">Create team</button>
+            </form>
+
+        {{/if}}
+    </section>
+
+</template>

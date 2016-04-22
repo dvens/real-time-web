@@ -1,0 +1,10 @@
+{
+  "name": "Dylan Vens First Meteor Try",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

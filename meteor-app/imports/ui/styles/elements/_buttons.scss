@@ -1,16 +1,23 @@
 .button {
 	border: 3px solid transparent;
-	color: $color-black;
+	background-color: $color-purple;
+	color: $color-white;
 	cursor: pointer;
 	display: block;
 	position: relative;
 	text-decoration: none;
 	transition-property: all !important;
 	vertical-align: middle;
+	padding: 0.5em;
+	margin-bottom: 1.2em;
 	width: 100%;
 
 	&.-bg-white,
 	&.-bg-gray-light {
 		background: $color-white;
+	}
+
+	&:hover {
+		background-color: #8F50E6;
 	}
 }

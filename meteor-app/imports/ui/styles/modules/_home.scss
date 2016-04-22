@@ -1,0 +1,37 @@
+.home {
+    h1 {
+        padding: 1.2em 0;
+        span {
+            color: $color-purple;
+        }
+    }
+}
+
+.user-status {
+
+    &.user-status--offline {
+        color: $color-red;
+    }
+
+    &.user-status--online {
+        color: $color-green;
+    }
+
+}
+
+    .user-status__indicator {
+        margin-right: 0.5em;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $color-gray;
+
+        &.user-status__indicator--online {
+            background-color: $color-green;
+        }
+
+        &.user-status__indicator--offline {
+            background-color: $color-red;
+        }
+    }
