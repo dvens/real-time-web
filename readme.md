@@ -65,4 +65,4 @@ League Ranked Pro is for the ranked League of Legends players that play in a tea
 # Week 2
 
 ## Exercise 1
-In week one I chose the meteor es6 structure. 
+In week one I chose the meteor es6 structure. [Link to MVP](http://37.139.2.180/)
