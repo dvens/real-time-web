@@ -1,5 +1,6 @@
 # Real Time Web
-In this repo you will find my Meteor roadtrip of three weeks.
+* In this repo you will find my Meteor roadtrip of three weeks.
+* [Link to MVP](http://37.139.2.180/)
 
 # Week 1:
 
@@ -17,7 +18,7 @@ League Ranked Pro shows the ranked players/team of League of Legends real time g
 > Pros
 
 * The datasets are updated every 500ms.
-* The dataset gives real time data of a match.
+* The dataset gives real time data of a match (Live data is disabled 30-04-16 because of ghosting).
 * The dataset shows the spells being used in match.
 * The dataset shows the different players in match with their champions and runes (runes being showed helps the enemy team to adept).
 * The dataset returns masteries being used by each player.
@@ -64,5 +65,99 @@ League Ranked Pro is for the ranked League of Legends players that play in a tea
 
 # Week 2
 
-## Exercise 1
-In week one I chose the meteor es6 structure. [Link to MVP](http://37.139.2.180/)
+## Structure Meteor Application
+In week one I chose the meteor es6 structure. I use the following structure:
+    
+    client/
+        head.html 
+        main.js  // Import client startup js
+        main.scss // Import all SASS stylesheets out of imports /ui
+    imports/
+        api/
+            globals/
+                helpers.js // Global helpers
+        team/
+            server/ 
+                publications.js // publications for the team collection
+            methods.js // methods for the team collection
+            team.js // Schematic and collections
+        users/
+            server/
+                publications.js // user publications
+        startup/
+            server/
+                index.js // imports all server code
+                accounts-config.js 
+                api-config.js // imports all server code out of api server
+            client/
+                index.js
+                routes.js
+        ui/
+            components/
+                form/
+                    form.html
+                    form.js
+            layouts/
+                base/
+                    footer.html
+                    header.html
+                index.html
+                index.js
+            pages/
+                game/
+                    game.html
+                    game.js
+                home/
+                    home.html
+                    home.js
+                login/
+                    login.html
+                    login.js
+                register/
+                    register.html
+                    register.js
+                team/
+                    team.html
+                    team.js
+                users/
+                    users.html
+                    users.js
+            styles/
+                core/
+                elements/
+                    buttons.scss
+                    form.scss
+                    lists.css
+                    loader.scss
+                layout/
+                    footer.scss
+                    header.scss
+                    main.scss
+                modules/
+                    game.scss
+                    home.scss
+                    login.scss
+                    page.scss
+                    team.scss
+                config.scss
+
+## Packages that I used
+I used the following packages:
+* standard-minifier-css   # CSS minifier run for production mode
+* standard-minifier-js    # JS minifier run for production mode
+* es5-shim                # ECMAScript 5 compatibility for older browsers.
+* ecmascript              # Enable ECMAScript2015+ syntax in app code
+* fourseven:scss
+* kadira:flow-router
+* kadira:blaze-layout
+* accounts-password
+* mizzao:user-status
+* arillo:flow-router-helpers
+* msavin:mongol
+* underscore
+* aldeed:simple-schema
+* aldeed:collection2
+* check
+
+
+
